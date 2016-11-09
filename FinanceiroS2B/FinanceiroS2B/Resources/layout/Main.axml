@@ -8,8 +8,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="29.5dp"
-        android:id="@+id/textView1"
-        android:paddingLeft="115" />
+        android:id="@+id/textView1" />
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"

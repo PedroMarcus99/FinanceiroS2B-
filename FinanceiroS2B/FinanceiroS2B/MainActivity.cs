@@ -5,13 +5,19 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using Android.Locations;
 
-namespace FinanceiroS2B {
+namespace FinanceiroS2B
+{
     [Activity(Label = "FinanceiroS2B", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity {
-        int count = 1;
+    public class MainActivity : Activity
+    {
 
-        protected override void OnCreate(Bundle bundle) {
+        protected override void OnCreate(Bundle bundle)
+        {
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
@@ -19,10 +25,17 @@ namespace FinanceiroS2B {
 
             // Get our button from the layout resource,
             // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
+           // Button botao_cadastro = FindViewById<Button>(Resource.Id.MyButton);
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            FindViewById<Button>(Resource.Id.MyButton).Click += Novaconta;
+
             }
+
+       void Novaconta(object sender, EventArgs e)
+        {
+           // nova pagina
+            StartActivity(typeof(tela_cadastro));
         }
     }
+}
 
