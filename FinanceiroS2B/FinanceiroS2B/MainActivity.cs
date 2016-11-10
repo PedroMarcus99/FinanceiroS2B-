@@ -38,19 +38,20 @@ namespace FinanceiroS2B
             CONTAS.Add("Caixa");
             CONTAS.Add("Banco do Brasil");
 
+            //string novoitem;
+            //novoitem = FindViewById<EditText>(Resource.Id.editText1).Text;
+            //CONTAS.Add(novoitem);
+
             ListView Lista = FindViewById<ListView>(Resource.Id.listaDados);
 
             GrenciamentoDaLista GL = new GrenciamentoDaLista(CONTAS, this);
 
             Lista.Adapter = GL;
-            Lista.ItemClick += List_ItemClick; 
-
-          
-
-
-
+            Lista.ItemClick += List_ItemClick;      
+           
 
         }
+      
 
         void List_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {

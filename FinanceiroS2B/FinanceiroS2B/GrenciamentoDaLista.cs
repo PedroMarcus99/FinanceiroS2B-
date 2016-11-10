@@ -59,8 +59,8 @@ namespace FinanceiroS2B
             // throw new NotImplementedException();
             View view = convertView;
             if (view == null)
-                view = C.LayoutInflater.Inflate(Resource.Layout.Main, null);
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = CONTAS[position];
+                view = C.LayoutInflater.Inflate(Resource.Layout.DadosConta, null);
+            view.FindViewById<TextView>(Resource.Id.textLabel).Text = CONTAS[position];
             return view; 
             
 

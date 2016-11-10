@@ -66,8 +66,8 @@ namespace FinanceiroS2B
 			// aapt resource value: 0x7f050007
 			public const int EditTxtValor = 2131034119;
 			
-			// aapt resource value: 0x7f05000c
-			public const int MyButton = 2131034124;
+			// aapt resource value: 0x7f05000d
+			public const int MyButton = 2131034125;
 			
 			// aapt resource value: 0x7f050008
 			public const int btnEntrada = 2131034120;
@@ -81,14 +81,11 @@ namespace FinanceiroS2B
 			// aapt resource value: 0x7f050002
 			public const int editText1 = 2131034114;
 			
-			// aapt resource value: 0x7f050004
-			public const int editText2 = 2131034116;
+			// aapt resource value: 0x7f05000c
+			public const int listaDados = 2131034124;
 			
 			// aapt resource value: 0x7f05000b
-			public const int listaDados = 2131034123;
-			
-			// aapt resource value: 0x7f05000a
-			public const int textLabel = 2131034122;
+			public const int textLabel = 2131034123;
 			
 			// aapt resource value: 0x7f050000
 			public const int textView1 = 2131034112;
