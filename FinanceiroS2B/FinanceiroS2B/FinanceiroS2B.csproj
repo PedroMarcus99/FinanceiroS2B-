@@ -62,7 +62,7 @@
     <Compile Include="GrenciamentoDaLista.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\tela_cadastro.cs" />
+    <Compile Include="tela_cadastro.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />

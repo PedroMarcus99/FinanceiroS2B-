@@ -16,7 +16,7 @@ namespace FinanceiroS2B
     [Activity(Label = "FinanceiroS2B", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        List<String> CONTAS; 
+        public List<String> CONTAS; 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -60,11 +60,22 @@ namespace FinanceiroS2B
 
         void Novaconta(object sender, EventArgs e)
         {
-           // nova pagina
-            StartActivity(typeof(tela_cadastro));
+            // nova pagina
+            //StartActivity(typeof(tela_cadastro));
+            var myIntent = new Intent(this, typeof(tela_cadastro));
+            StartActivityForResult(myIntent, 0);
         }
         void MainActivity_Click(object sender, EventArgs e)
         { StartActivity(typeof(Contas)); }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            if (resultCode == Result.Ok)
+            {
+                CONTAS.Add(data.GetStringExtra("conta"));
+            }
+            // do what you want with the result here
+        }
     }
 }
 
