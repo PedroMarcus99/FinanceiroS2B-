@@ -16,7 +16,9 @@ namespace FinanceiroS2B
     [Activity(Label = "FinanceiroS2B", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        public List<String> CONTAS; 
+        public List<String> CONTAS;
+        public ListView Lista;
+        public GrenciamentoDaLista GL;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -42,9 +44,9 @@ namespace FinanceiroS2B
             //novoitem = FindViewById<EditText>(Resource.Id.editText1).Text;
             //CONTAS.Add(novoitem);
 
-            ListView Lista = FindViewById<ListView>(Resource.Id.listaDados);
+            Lista = FindViewById<ListView>(Resource.Id.listaDados);
 
-            GrenciamentoDaLista GL = new GrenciamentoDaLista(CONTAS, this);
+            GL = new GrenciamentoDaLista(CONTAS, this);
 
             Lista.Adapter = GL;
             Lista.ItemClick += List_ItemClick;      
@@ -73,6 +75,7 @@ namespace FinanceiroS2B
             if (resultCode == Result.Ok)
             {
                 CONTAS.Add(data.GetStringExtra("conta"));
+                GL.NotifyDataSetChanged();
             }
             // do what you want with the result here
         }
