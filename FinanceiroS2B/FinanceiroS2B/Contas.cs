@@ -12,20 +12,15 @@ using Android.Widget;
 
 namespace FinanceiroS2B
 {
-    [Activity()]
-    class tela_cadastro : Activity
+    public class Contas : Activity
     {
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
-            SetContentView(Resource.Layout.cadastro);
+            SetContentView(Resource.Layout.Conta);
             this.ActionBar.SetDisplayHomeAsUpEnabled(true);
-
         }
 
-        //Método que retorna para a tela inicial do projeto, quando a Activity de cadastro foi exibida. 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
@@ -37,7 +32,6 @@ namespace FinanceiroS2B
                 default:
                     return base.OnOptionsItemSelected(item);
             }
-
         }
     }
 }
