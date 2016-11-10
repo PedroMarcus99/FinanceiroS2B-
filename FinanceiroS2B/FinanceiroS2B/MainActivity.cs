@@ -30,7 +30,9 @@ namespace FinanceiroS2B
 
             
             FindViewById<Button>(Resource.Id.MyButton).Click += Novaconta;
-            FindViewById<TextView>(Resource.Id.textView1).Click += MainActivity_Click;
+            // FindViewById<TextView>(Resource.Id.textView1).Click += MainActivity_Click;
+            
+            
 
             CONTAS = new List<string>();
             CONTAS.Add("Bradesco");
@@ -38,24 +40,25 @@ namespace FinanceiroS2B
             CONTAS.Add("Caixa");
             CONTAS.Add("Banco do Brasil");
 
-            //string novoitem;
-            //novoitem = FindViewById<EditText>(Resource.Id.editText1).Text;
-            //CONTAS.Add(novoitem);
-
+           
             ListView Lista = FindViewById<ListView>(Resource.Id.listaDados);
 
             GrenciamentoDaLista GL = new GrenciamentoDaLista(CONTAS, this);
 
             Lista.Adapter = GL;
-            Lista.ItemClick += List_ItemClick;      
+            Lista.ItemClick += List_ItemClick;
+
+
+
+         
            
 
         }
-      
 
         void List_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            Toast.MakeText(this, CONTAS[e.Position], ToastLength.Short).Show();
+          //  Toast.MakeText(this, CONTAS[e.Position], ToastLength.Short).Show();
+            StartActivity(typeof(Tela_classe));
         }
 
         void Novaconta(object sender, EventArgs e)
@@ -63,6 +66,15 @@ namespace FinanceiroS2B
            // nova pagina
             StartActivity(typeof(tela_cadastro));
         }
+
+
+        ///Nova alteraçao
+        void Regitroconta(object sender, EventArgs e)
+        {
+            StartActivity(typeof(Tela_classe));
+        }
+
+
         void MainActivity_Click(object sender, EventArgs e)
         { StartActivity(typeof(Contas)); }
     }
