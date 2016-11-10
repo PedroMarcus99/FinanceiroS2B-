@@ -14,7 +14,7 @@ namespace FinanceiroS2B {
     [Activity()]
     class tela_cadastro : Activity {
 
-        protected override void OnCreate(Bundle bundle) {
+        protected override void OnCreate(Bundle bundle) {//cria a nova tela 
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.cadastro);
@@ -22,5 +22,17 @@ namespace FinanceiroS2B {
 
             }
 
+        public override bool OnOptionsItemSelected(IMenuItem item)///volta na tela 
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    Finish();
+                    return true;
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
         }
+
+    }
     }
