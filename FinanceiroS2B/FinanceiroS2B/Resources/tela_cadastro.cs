@@ -37,7 +37,6 @@ namespace FinanceiroS2B
                 default:
                     return base.OnOptionsItemSelected(item);
             }
-
         }
     }
 }
