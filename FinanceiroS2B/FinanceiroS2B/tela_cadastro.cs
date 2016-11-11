@@ -24,6 +24,8 @@ namespace FinanceiroS2B
             FindViewById<Button>(Resource.Id.button1).Click += Tela_cadastro_Click; ;
         }
 
+
+        //Armazena um novo item na lista.. # MainActivity 
         private void Tela_cadastro_Click(object sender, EventArgs e)
         {
             string novoitem = FindViewById<EditText>(Resource.Id.editText1).Text;

@@ -85,6 +85,8 @@ namespace FinanceiroS2B
         void MainActivity_Click(object sender, EventArgs e)
         { StartActivity(typeof(Contas)); }
 
+
+        //Responde ao método da classe tela_cadastro para o armazenamento do item na Lista. 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             if (resultCode == Result.Ok)
